@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.header-clipping {
+  @apply relative;
+}
+
+.header-clipping .container {
+  @apply relative; 
+  z-index: 3;
+}
+
+.header-clipping:before {
+  content: "";
+  height: 648px;
+  @apply w-full bg-blue-600 inset-0 absolute;
+}
+
