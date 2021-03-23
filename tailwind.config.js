@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors')
+const colors = require('./tailwindcss/colors')
 
 module.exports = {
   purge: [],
@@ -12,21 +12,7 @@ module.exports = {
       xl: '1280px',
       '2xl': '1536px',
     },
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-
-      black: colors.black,
-      white: colors.white,
-      gray: colors.coolGray,
-      red: colors.red,
-      yellow: colors.amber,
-      green: colors.emerald,
-      blue: colors.blue,
-      indigo: colors.indigo,
-      purple: colors.violet,
-      pink: colors.pink,
-    },
+    colors: colors,
     spacing: {
       px: '1px',
       0: '0px',
@@ -164,20 +150,8 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-        'ui-sans-serif',
-        'system-ui',
-        '-apple-system',
-        'BlinkMacSystemFont',
-        '"Segoe UI"',
-        'Roboto',
-        '"Helvetica Neue"',
-        'Arial',
-        '"Noto Sans"',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
+        'Poppins', 'Montserrat'
+
       ],
       serif: ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       mono: [
