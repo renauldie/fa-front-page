@@ -7,7 +7,7 @@ export default function Hero() {
 		window.open('');
 	}
 	return (
-		<div className='flex justify-between items-center mt-10'>
+		<div className='container mx-6 flex justify-between items-center mt-10'>
 			<div className='w-full md:w-1/2 mt-10 md:mt-0'>
 				<h1 className='text-4xl text-white mb-5 font-semibold'>
 					<span className='text-gray-300'>Forum Asisten</span>
