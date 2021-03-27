@@ -30,7 +30,7 @@ export default function Header({ onLight }) {
 						<a
 							className={[
 								linkColor,
-								'text-white hover:text-gray-400 transition-all duration-250 text-lg px-6 py-3 font-medium',
+								'text-white hover:text-gray-400 transition-all duration-300 text-lg px-6 py-3 font-medium',
 							].join(' ')}>
 							Home
 						</a>
@@ -41,7 +41,7 @@ export default function Header({ onLight }) {
 						<a
 							className={[
 								linkColor,
-								'text-white hover:text-gray-400 transition-all duration-250 text-lg px-6 py-3 font-medium',
+								'text-white hover:text-gray-400 transition-all duration-300 text-lg px-6 py-3 font-medium',
 							].join(' ')}>
 							Regulation
 						</a>
@@ -52,7 +52,7 @@ export default function Header({ onLight }) {
 						<a
 							className={[
 								linkColor,
-								'text-white hover:text-gray-400 transition-all duration-250 text-lg px-6 py-3 font-medium',
+								'text-white hover:text-gray-400 transition-all duration-300 text-lg px-6 py-3 font-medium',
 							].join(' ')}>
 							About Team
 						</a>

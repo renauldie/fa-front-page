@@ -6,6 +6,7 @@ function Random({ data }) {
 		<>
 			<Head>
 				<title>Forum Asisten|Random Page</title>
+				{/* <link rel='icon' href='/favicon.ico' /> */}
 			</Head>
 
 			<main className='container mt-12 mx-auto'>
@@ -13,7 +14,7 @@ function Random({ data }) {
 				<ul>
 					{data.map((todo) => {
 						return (
-							<li className="border border-indigo-700 p-4">
+							<li className='border border-indigo-700 p-4'>
 								{todo?.title ?? '-'}{' '}
 								<Link href={`/random/${todo.id}`}>
 									<a>launch</a>

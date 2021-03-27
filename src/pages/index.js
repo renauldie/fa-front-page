@@ -10,7 +10,7 @@ function Home({ data }) {
 	return (
 		<>
 			<Head>
-				<title>Forum Asisten</title>
+				<title>Forum Asisten | Universitas Amikom Yogyakarta</title>
 				{/* <link rel='icon' href='/favicon.ico' /> */}
 			</Head>
 
