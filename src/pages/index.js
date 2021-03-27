@@ -11,7 +11,7 @@ function Home({ data }) {
 		<>
 			<Head>
 				<title>Forum Asisten | Universitas Amikom Yogyakarta</title>
-				{/* <link rel='icon' href='/favicon.ico' /> */}
+				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
 			<main>
