@@ -22,7 +22,7 @@ export default function Hero() {
 					<br /> <span className='font-semibold'>#asistendirumahaja</span>
 				</p>
 
-				<form onSubmit={submit} className='flex mt-32'>
+				<form onSubmit={submit} className='flex mt-20 xs:mt-10'>
 					<input
 						type='text'
 						onChange={(event) => setstate(event.target.value)}
