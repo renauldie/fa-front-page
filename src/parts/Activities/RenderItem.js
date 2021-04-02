@@ -2,7 +2,6 @@ import React from "react";
 
 import Link from "next/link";
 
-
 export default function RenderItem({ item }) {
   return (
     <div className="w-full md:w-1/4 px-4 mb-6">
