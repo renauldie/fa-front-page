@@ -7,6 +7,7 @@ import Header from 'src/parts/Header';
 import Hero from 'src/parts/Hero';
 import Activity from 'src/parts/Activities';
 import ListBenefit from 'src/parts/ListBenefit';
+import Footer from 'src/parts/Footer'
 
 function Home({ data }) {
 	console.log(data);
@@ -28,10 +29,12 @@ function Home({ data }) {
 			<section className='container px-4 mx-auto pt-36 xl:pt-48'>
 				<Activity data={data}></Activity>
 			</section>
-			<section className='container px-4 mx-auto pt-20'>
+			<section className='container px-4 mx-auto pt-12'>
 				<ListBenefit data={data}></ListBenefit>
 			</section>
-			<section className="container mx-auto py-24"></section>
+			<section className="bg-blue-1000 py-12 mt-24">
+				<Footer></Footer>
+			</section>
 		</>
 	);
 }

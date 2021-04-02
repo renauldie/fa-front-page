@@ -11,7 +11,7 @@ export default function index() {
 		{
 			imageName: <ECertifiate />,
 			name: 'Teach Experience',
-			total: 'work experience'
+			total: formatThousand(9874)
 		},
 		{
 			imageName: <ECertifiate />,
@@ -21,7 +21,7 @@ export default function index() {
 		{
 			imageName: <ECertifiate />,
 			name: 'New Environment',
-			total: 'make relationship'
+			total: formatThousand(229)
 		},
 		{
 			imageName: <ECertifiate />,
@@ -31,12 +31,12 @@ export default function index() {
 		{
 			imageName: <ECertifiate />,
 			name: 'Become Profesional',
-			total: 'profesional look'
+			total: formatThousand(5421)
 		},
 		{
 			imageName: <ECertifiate />,
 			name: 'Self Organizing',
-			total: 'make it happen'
+			total: 'Your Next'
 		},
 		
 	];
