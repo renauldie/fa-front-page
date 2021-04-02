@@ -4,7 +4,9 @@ export default function Hero() {
 	const [state, setstate] = useState(() => '');
 
 	function submit() {
-		window.open('');
+		window.open(
+			`${process.env.NEXT_PUBLIC_MEMBERPAGE_URL}/register?npm=${state}`
+		);
 	}
 	return (
 		<div className='container mx-6 flex justify-between items-center mt-10'>

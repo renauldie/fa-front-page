@@ -5,9 +5,11 @@ import axios from 'src/configs/axios';
 
 import Header from 'src/parts/Header';
 import Hero from 'src/parts/Hero';
-import Activity from 'src/parts/Activities';
+import Event from 'src/parts/Events';
 import ListBenefit from 'src/parts/ListBenefit';
-import Footer from 'src/parts/Footer'
+import Footer from 'src/parts/Footer';
+
+import events from 'src/constants/api/events';
 
 function Home({ data }) {
 	console.log(data);
@@ -27,12 +29,12 @@ function Home({ data }) {
 				</section>
 			</main>
 			<section className='container px-4 mx-auto pt-36 xl:pt-48'>
-				<Activity data={data}></Activity>
+				<Event data={data}></Event>
 			</section>
 			<section className='container px-4 mx-auto pt-12'>
 				<ListBenefit data={data}></ListBenefit>
 			</section>
-			<section className="bg-blue-1000 py-12 mt-24">
+			<section className='bg-blue-1000 py-12 mt-24'>
 				<Footer></Footer>
 			</section>
 		</>
@@ -41,8 +43,9 @@ function Home({ data }) {
 
 Home.getInitialProps = async () => {
 	try {
-		const data = await axios.get(`/events`);
-		return { data: data.data };
+		const data = await events.all();
+		console.log(data.data);
+		return { data: data };
 	} catch (error) {
 		return error;
 	}
