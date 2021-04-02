@@ -6,6 +6,7 @@ import axios from 'src/configs/axios';
 import Header from 'src/parts/Header';
 import Hero from 'src/parts/Hero';
 import Activity from 'src/parts/Activities';
+import ListBenefit from 'src/parts/ListBenefit';
 
 function Home({ data }) {
 	console.log(data);
@@ -24,19 +25,21 @@ function Home({ data }) {
 					</div>
 				</section>
 			</main>
-			<section className='container px-4 mx-auto pt-32 xl:pt-48'>
+			<section className='container px-4 mx-auto pt-36 xl:pt-48'>
 				<Activity data={data}></Activity>
 			</section>
+			<section className='container px-4 mx-auto pt-20'>
+				<ListBenefit data={data}></ListBenefit>
+			</section>
+			<section className="container mx-auto py-24"></section>
 		</>
 	);
 }
 
 Home.getInitialProps = async () => {
 	try {
-		// const data = await axios.get(`/courses`);
-		// return {data: data.data.data};
 		const data = await axios.get(`/events`);
-		return {data: data.data};
+		return { data: data.data };
 	} catch (error) {
 		return error;
 	}
