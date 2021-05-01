@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 import Logo from 'public/images/logo-2.svg';
-import DefaultAvatar from 'public/images/logo-2.svg';
+import DefaultAvatar from 'public/images/logo.svg';
 
 export default function Header({ onLight }) {
 	const [User, setUser] = useState(() => null);
@@ -31,8 +31,7 @@ export default function Header({ onLight }) {
 			? `${process.env.NEXT_PUBLIC_MEMBERPAGE_URL}/register`
 			: `${process.env.NEXT_PUBLIC_MEMBERPAGE_URL}/login`;
 
-	const textCTA =
-		router.pathname.indexOf('/login') > -1 ? 'Register' : 'Join Us';
+	const textCTA = router.pathname.indexOf('/login') > -1 ? '-' : 'Join Us';
 
 	return (
 		<header
@@ -46,16 +45,16 @@ export default function Header({ onLight }) {
 			<div className='flex md:hidden'>
 				<button
 					onClick={() => setToggleMenu((prev) => !prev)}
-					className={['toggle z-50', ToggleMenu ? 'active' : ''].join(
+					className={['toggle z-50', ToggleMenu ? 'active mr-10' : ''].join(
 						' '
 					)}></button>
 			</div>
 			<ul
 				className={[
-					'transition-all duration-200 items-center fixed inset-0 bg-indigo-1000 pt-24 md:pt-0 md:bg-transparent md:relative md:flex md:opacity-100 md:visible',
+					'transition-all duration-200 items-center fixed inset-0 bg-blue-1000 pt-24 md:pt-0 md:bg-transparent md:relative md:flex md:opacity-100 md:visible',
 					ToggleMenu ? 'opacity-100 visible z-20' : 'opacity-0 invisible',
 				].join(' ')}>
-				<li>
+				<li className='my-4 md:my-0'>
 					<Link href='/'>
 						<a
 							className={[
@@ -66,7 +65,7 @@ export default function Header({ onLight }) {
 						</a>
 					</Link>
 				</li>
-				<li>
+				<li className='my-4 md:my-0'>
 					<Link href='/'>
 						<a
 							className={[
@@ -77,7 +76,7 @@ export default function Header({ onLight }) {
 						</a>
 					</Link>
 				</li>
-				<li>
+				<li className='my-4 md:my-0'>
 					<Link href='/'>
 						<a
 							className={[
@@ -113,7 +112,7 @@ export default function Header({ onLight }) {
 							target='_blank'
 							rel='noopener noereferrer'
 							href={linkCTA}
-							className='bg-indigo-700 hover:bg-indigo-800 transition-all duration-200 text-white hover:text-teal-500 text-lg px-6 py-3 font-medium ml-6'>
+							className='bg-blue-600 hover:bg-blue-500 transition-all duration-200 text-white hover:text-gray-500 text-lg px-6 py-3 font-medium ml-6 rounded-md'>
 							{textCTA}
 						</a>
 					)}

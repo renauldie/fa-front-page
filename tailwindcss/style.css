@@ -4,6 +4,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+} */
+
 .header-clipping {
 	@apply relative;
 }
@@ -15,9 +24,9 @@
 
 .header-clipping:before {
 	content: '';
-	height: 648px;
+	height: 600px;
 	@apply w-full bg-blue-600 inset-0 absolute;
-	clip-path: polygon(0 0, 100% 0, 100% 87%, 0% 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
 }
 
 @media (max-width: 640px) {
@@ -65,30 +74,68 @@
 }
 
 .card svg {
-  @apply fill-current text-gray-600;
+	@apply fill-current text-gray-600;
 }
 
 .card:hover svg {
-  @apply fill-current text-white;
+	@apply fill-current text-white;
 }
 
 .card:hover {
-  @apply bg-blue-400 border-blue-700;
-  box-shadow: 0px 6px 15px rgba(77, 85, 188, 0.4);
+	@apply bg-blue-400 border-blue-700;
+	box-shadow: 0px 6px 15px rgba(77, 85, 188, 0.4);
 }
 
 .card .card-meta h4 {
-  @apply text-gray-900
+	@apply text-gray-900;
 }
 
 .card:hover .card-meta h4 {
-  @apply text-white
+	@apply text-white;
 }
 
 .card .card-meta h5 {
-  @apply text-gray-600
+	@apply text-gray-600;
 }
 
 .card:hover .card-meta h5 {
-  @apply text-white
+	@apply text-white;
+}
+
+.toggle {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	z-index: 9999;
+}
+.toggle:focus {
+	outline: none;
+}
+.toggle:before,
+.toggle:after {
+	@apply right-0 absolute bg-gray-200 transition-all duration-200;
+	content: '';
+	height: 3px;
+	transform-origin: center;
+}
+.toggle:before {
+	top: 26%;
+	width: 20px;
+}
+.toggle:after {
+	top: 58%;
+	width: 12px;
+}
+
+.toggle.active:before,
+.toggle.active:after {
+	width: 20px;
+	top: 50%;
+}
+
+.toggle.active:before {
+	transform: translateY(-50%) rotate(-45deg);
+}
+.toggle.active:after {
+	transform: translateY(-50%) rotate(45deg);
 }

@@ -17,18 +17,18 @@ function Home({ data }) {
 		<>
 			<Head>
 				<title>Forum Asisten | Universitas Amikom Yogyakarta</title>
-				<link rel='icon' href='/favicon.ico' />
+				{/* <link rel='icon' href='/favicon.ico' /> */}
 			</Head>
 
 			<main>
-				<section className='header-clipping pt-10 md:min-h-0'>
-					<div className='container mx-auto px-4'>
+				<section className='header-clipping pt-10 md:min-h-0 min-h-full'>
+				<div className="container mx-auto px-4">
 						<Header onLight></Header>
 						<Hero></Hero>
 					</div>
 				</section>
 			</main>
-			<section className='container px-4 mx-auto pt-36 xl:pt-48'>
+			<section className='container px-4 mx-auto pt-36 md:pt-24 xl:pt-48'>
 				<Event data={data}></Event>
 			</section>
 			<section className='container px-4 mx-auto pt-12'>
