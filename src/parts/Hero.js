@@ -33,8 +33,6 @@ export default function Hero() {
 						placeholder='Your NPM'
 					/>
 					<button className='bg-blue-500 hover:bg-blue-400 transition-all duration-200 focus:outline-none shadow-inner text-white px-4 md:px-6 py-3 whitespace-nowrap'>
-						<span className='absolute rounded-full h-3 w-3 bg-white -mt-4 ml-32'></span>
-						<span className='sm:hidden animate-ping absolute h-3 w-3 rounded-full bg-white opacity-75 -mt-4 ml-32'></span>
 						Choose Class!
 					</button>
 				</form>
